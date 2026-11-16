@@ -152,8 +152,11 @@ static const CommandSpec COMMANDS[] = {
     { "CONVERT",  4, cmdConvert  },
     { "GPA",      2, cmdGpa      },
     { "AVG",      2, cmdAvg      },
-    { "GRAD",     2, cmdGrad     },
-    { "ELIGIBLE", 4, cmdEligible }
+    { "GRAD",       2, cmdGrad       },
+    { "ELIGIBLE",   4, cmdEligible   },
+    { "TRANSCRIPT", 2, cmdTranscript },
+    { "SAVE",       2, cmdSave       },
+    { "LOAD",       2, cmdLoad       }
 };
 static const int NUM_COMMANDS = (int)(sizeof(COMMANDS) / sizeof(COMMANDS[0]));
 

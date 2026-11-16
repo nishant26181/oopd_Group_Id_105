@@ -3,7 +3,7 @@ CXX = g++
 CXXFLAGS = -std=c++11 -Wall -Wextra -fno-exceptions
 
 # Source files, object files, and output executable name
-SRCS = grp_105_erp.cpp grp_105_main.cpp grp_105_course.cpp grp_105_student.cpp grp_105_registration.cpp grp_105_academic.cpp
+SRCS = grp_105_erp.cpp grp_105_main.cpp grp_105_course.cpp grp_105_student.cpp grp_105_registration.cpp grp_105_academic.cpp grp_105_storage.cpp
 OBJS = $(SRCS:.cpp=.o)
 TARGET = acaderp
 

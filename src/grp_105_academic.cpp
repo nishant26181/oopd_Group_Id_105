@@ -165,3 +165,26 @@ ErrorCode cmdGrad(const std::string& line)
               << (mask == 0 ? " YES" : " NO " + failList(mask)) << "\n";
     return OK;
 }
+
+// Handle TRANSCRIPT <roll>: print every registration with term, grade, and credits in term order
+ErrorCode cmdTranscript(const std::string& line)
+{
+    int s = -1;
+    ErrorCode e = parseRollQuery(line, &s);
+    if (e != OK) return e;
+
+    const Student& st = students[s];
+    std::cout << "TRANSCRIPT " << st.getRoll() << "\n";
+    for (int t = MIN_TERM; t <= MAX_TERM; ++t) {
+        for (int i = 0; i < st.getNumRegs(); ++i) {
+            const Registration& r = st.getReg(i);
+            if (r.getTerm() != t) continue;
+            const Course& crs = courses[r.getCourse()];
+            std::cout << r.getTerm() << " "
+                      << crs.getCode() << " "
+                      << (r.hasGrade() ? r.getGrade() : "-") << " "
+                      << crs.getCredits() << "\n";
+        }
+    }
+    return OK;
+}

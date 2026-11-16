@@ -220,6 +220,9 @@ ErrorCode cmdGpa(const std::string& line);
 ErrorCode cmdAvg(const std::string& line);
 ErrorCode cmdGrad(const std::string& line);
 ErrorCode cmdEligible(const std::string& line);
+ErrorCode cmdTranscript(const std::string& line);
+ErrorCode cmdSave(const std::string& line);
+ErrorCode cmdLoad(const std::string& line);
 ErrorCode processLine(const std::string& line);
 void releaseAll();
 

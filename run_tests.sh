@@ -38,6 +38,8 @@ desc_for() {
         T21) echo "E_FULL (101st student; 51st course)" ;;
         T22) echo "E_PARSE (11-char roll; unknown command; term x)" ;;
         T23) echo "Later lines still run (Error in middle of file)" ;;
+        T24) echo "Bonus TRANSCRIPT <roll> in term order with grade and credits" ;;
+        T25) echo "Bonus SAVE <file> and LOAD <file> with atomic error rollback" ;;
         *)   echo "" ;;
     esac
 }
