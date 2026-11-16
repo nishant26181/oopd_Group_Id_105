@@ -18,6 +18,7 @@ This compiles with `g++ -std=c++11 -Wall -Wextra -fno-exceptions` and produces `
 
 ### Run Tests
 ```bash
+chmod +x ./run_tests.sh
 ./run_tests.sh
 ```
 
